@@ -1,0 +1,55 @@
+CREATE DATABASE Alexis_Tattoo;
+
+USE Alexis_Tattoo;
+
+CREATE TABLE usuarios (
+id_usuario INT PRIMARY KEY,
+nombres VARCHAR(60),
+apellidos VARCHAR(60),
+correo_electronico VARCHAR(60) UNIQUE,
+celular VARCHAR(20),
+fecha_de_nacimiento DATE,
+nombre_usuario VARCHAR(60) UNIQUE,
+contraseña VARCHAR(30),
+estado ENUM('activo', 'inactivo') DEFAULT 'activo',
+perfil ENUM('admin','usuario') DEFAULT 'usuario'
+);
+
+CREATE TABLE agendar_cita (
+id_agendar_cita INT AUTO_INCREMENT PRIMARY KEY,
+nombres VARCHAR(60),
+apellidos VARCHAR(60),
+correo_electronico VARCHAR(60),
+celular VARCHAR(20),
+idea_foto BLOB,
+descripcion VARCHAR(256),
+id_usuario INT,
+FOREIGN KEY (id_usuario) REFERENCES usuarios (id_usuario)
+);
+
+CREATE TABLE servicios (
+id_servicios INT AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(50),
+descripcion VARCHAR(100),
+costo DECIMAL(10, 2)
+);
+
+CREATE TABLE registro (
+id_registro INT AUTO_INCREMENT PRIMARY KEY,
+id_agendar_cita INT,
+id_servicio INT,
+fecha DATE,
+hora TIME,
+FOREIGN KEY (id_agendar_cita) REFERENCES Agendar_cita(id_agendar_cita),
+FOREIGN KEY (id_servicio) REFERENCES Servicios(id_servicios)
+);
+
+CREATE TABLE contactanos (
+id_contactanos INT AUTO_INCREMENT PRIMARY KEY,
+nombre VARCHAR(60),
+celular VARCHAR(15),
+mensaje VARCHAR(500),
+correo VARCHAR(60)
+);
+
+

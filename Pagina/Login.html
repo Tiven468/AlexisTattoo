@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar Sesion</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="icon" href="images/LG.jpg" type="image/x-icon">
+
+
+</head>
+<body>
+        <img src="images/LG.jpg" class="log">
+    <div class="">
+		<a href="index.html"><img src="images/regresar.jpg" class="LG"></a>
+	</div>
+    <main>
+    <div class="contenedor_todo">
+        <div class="caja_trasera">
+          <div class="caja_trasera-login">
+                <h3>¿Ya tienes una cuenta?</h3>
+              <p>Inicia sesión para entrar a tu perfil</p>
+                <button id="btn_iniciar-sesion">Iniciar sesión</button>
+         </div>
+            
+             <div class="caja_trasera-register">
+                <h3>¿Aun no tienes una cuenta?</h3>
+                <p>Registrate es rapido y facil</p>
+                <button id="btn_registrarse">Registrarse</button>
+            </div>
+          </div>
+            <div class="contenedor_login-register">
+            <form action="php/login.php" method="post" class="formulario_login">
+            <h2>Iniciar sesión</h2>
+                <input type="text" placeholder="nombre de usuario" name="username" required="">
+                <input type="password" placeholder="contraseña" name="password" required="">
+                <button type="submit" class="btn btn-primary">Ingresar</button>
+            </form>
+            
+            <form action="php/registro.php" method="post" class="formulario_register">
+            <h2>Registro</h2>
+            <input type="text" name="nombre" placeholder="Nombres" required>
+            <input type="text" name="apellido" placeholder="Apellidos" required>
+            <input type="text" name="correo" placeholder="Correo electronico">
+            <input type="int" name="celular" placeholder="Telefono o Celular">
+            <input type="date" name="fec_nac" placeholder="Fecha de Nacimiento">
+            <input type="int" name="id_usuario" placeholder="Documento de identidad" required>
+            <input type="text" name="username" placeholder="Nombre de usuario" required>
+            <input type="password" name="password" placeholder="contraseña" required>
+            <button type="submit" class="btn btn-primary">Registrarse</button>
+            </form>
+         </div>
+      </div>
+        
+    </main>
+    <script src="js/js.js"></script>
+
+</body>
+</html>

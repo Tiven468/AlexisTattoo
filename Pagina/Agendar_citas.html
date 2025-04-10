@@ -1,0 +1,54 @@
+<html lang="es">
+<head>
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Agendar Cita</title>
+    <link rel="stylesheet" href="css/citas.css">
+    <link rel="icon" href="images/LG.jpg" type="image/x-icon">
+
+
+</head>
+<body>
+        <img src="images/LG.jpg" class="logo">
+    
+    <div class="">
+		<a href="index.html"><img src="images/regresar.jpg" class="LG"></a>
+	</div>
+    <video class="videofondo2" src="images\WhatsApp Video 2022-10-26 at 8.59.06 PM.mp4"  muted loop autoplay></video>
+
+    <form class="form-register" enctype="multipart/form-data" action="php/agendar_cita.php"  method="post" enctype="multipart/form-data">
+    <h1 class="form__title">Agenda tu cita</h1>
+    <h6>Estamos aqui para hacer realidad tus ideas</h6>
+    <div class="container--flex">
+        <label for="" class="form__label">Nombres</label>
+        <input type="text" class="form__input" name="nombres" placeholder="ingrese Nombre" required>
+    </div>
+    <div class="container--flex">
+        <label for="" class="form__label">Apellidos</label>
+        <input type="text" class="form__input" name="apellidos" placeholder="ingrese Apellidos" required>
+    </div>
+    <div class="container--flex">
+        <label for="" class="form__label">Correo Electronico</label>
+        <input type="email" class="form__input" name="correo" placeholder="ingrese Correo Electronico" required>
+    </div> 
+    <div class="container--flex">
+        <label for="" class="form__label">Numero de Telefono</label>
+        <input type="numeric" class="form__input" name="telefono" placeholder="ingrese Telefono" required>
+    </div>
+    <div>
+     <div class="container--flex">
+     <label for="" class="form__label">Muestranos de tu idea</label>
+        <input type="file" name="archivo" class="form__file" required>
+     </div>
+     <div class="container--flex">
+        <label for="" class="form__label">Cuéntanos de tu idea</label>
+         <textarea class="form__text" id="escribe tu idea" name="comentario" placeholder="¿Cuéntanos que te quieres hacer?"></textarea>
+    </div>   
+    <button type="submit" class="form__submit">Agendar</button>
+    </div>
+    </form>
+    
+    
+</body>
+</html>
